@@ -2,7 +2,7 @@
 
 https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
 
-##### Step 1: Setup containerd
+##### Step 1: Setup containerd (Need to enable Kernel module so it could start automatically on server start)
 ```sh
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 overlay
@@ -10,8 +10,8 @@ br_netfilter
 EOF
 ```
 ```sh
-modprobe overlay
-modprobe br_netfilter
+sudo modprobe overlay
+sudo modprobe br_netfilter
 ```
 ```sh
 cat <<EOF | sudo tee /etc/sysctl.d/99-kubernetes-cri.conf
