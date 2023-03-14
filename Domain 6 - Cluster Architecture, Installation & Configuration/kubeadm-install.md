@@ -25,16 +25,16 @@ sudo sysctl --system
 ```
 ```sh
 sudo apt-get install -y containerd
-mkdir -p /etc/containerd
+sudo mkdir -p /etc/containerd
 sudo containerd config default > /etc/containerd/config.toml
 ```
 ```sh
-nano /etc/containerd/config.toml
+sudo nano /etc/containerd/config.toml
 ```
   --> SystemdCgroup = true
 
 ```sh
-systemctl restart containerd
+sudo systemctl restart containerd
 ```
 
 ##### Step 2: Kernel Parameter Configuration
