@@ -21,12 +21,12 @@ net.bridge.bridge-nf-call-ip6tables = 1
 EOF
 ```
 ```sh
-sysctl --system
+sudo sysctl --system
 ```
 ```sh
-apt-get install -y containerd
+sudo apt-get install -y containerd
 mkdir -p /etc/containerd
-containerd config default > /etc/containerd/config.toml
+sudo containerd config default > /etc/containerd/config.toml
 ```
 ```sh
 nano /etc/containerd/config.toml
